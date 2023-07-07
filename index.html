@@ -6,19 +6,17 @@
     <title>Initiation à javascript</title>
 </head>
 <body>
-    <h1>Initiation à javascript</h1>
+    <h1 id="titre" class="test">Initiation à javascript</h1>
     <h2>Manipulation du dom</h2>
 
-    <!-- Formulaire-->
+  <ul id="menu">
+    <li>Lien 1</li>
+    <li>Lien 2</li>
+    <li>Lien 3</li>
+    <li>Lien 4</li>
+    <li>Lien 5</li>
+  </ul>
 
-    <form action="#" method="POST">
-        <input type="search" placeholder="Recherche">
-        <input type="submit">
-    </form>
-<form action="">
-    <input type="search" placeholder="Recherche">
-    <input type="submit">
-</form>
 
 
     <!-- Liens-->
@@ -28,8 +26,8 @@
 
     <!-- images -->
 
-    <img src="conseils-tpe.jpg" alt="exemple">
-    <img src="demo5-bw.jpg" alt="">
+    <img src="conseils-tpe.jpg" alt="exemple" width="200">
+    <img src="demo5-bw.jpg" alt="" width="200">
 
 
 
@@ -37,13 +35,30 @@
      <script src="script.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-    var val1 = document.forms[1].action;
-    var val2 = document.links[0].className;
-    var img = document.images[0].getAttribute('alt');
-    var script1 = document.scripts[0].getAttribute('src');
-    console.log(val2);
-    console.log(img);
-    console.log(script1);
+        var val = document.getElementById('titre');
+        val.style.background ="#ff0000";
+        val.style.color="white";
+        val.style.fontSize="3em";
+
+        // Manipuler les textes
+
+        val.textContent="Manipuler le DOM";
+        val.innerText="Coucou";
+        val.innerHTML="<span style='color:green'>Javascript</span>";
+
+        document.querySelector('h2').style.color="purple";
+        
+        console.log(val);
+
+        console.log(document.querySelector('h2'));
+
+
+        ///// Liens Menu ///
+        document.querySelector('li').style.background="gray";
+        document.querySelector('li:last-child').style.color="red";
+
+        document.querySelector('li:nth-child(2)').style.background="blue";
+
     </script>
 
 
