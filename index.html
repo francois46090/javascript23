@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiation à javascript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <h1 id="titre" class="test">Initiation à javascript</h1>
@@ -53,17 +56,33 @@
         console.log(document.querySelector('h2'));
 
 
-        ///// Liens Menu ///
+        ///// Liens Menu : Créer des éléments ///
       
-        //let elements = document.getElementsByClassName('lien');
+        let item = document.createElement('li');
+        item.className = 'new';
+        item.id='sav';
+        item.setAttribute('title','Lien pour contacter le Sav');
 
-        let elements = document.querySelectorAll('li.lien');
+        item.appendChild(document.createTextNode('Contact'));
+        document.querySelector('#menu').appendChild(item);
 
+        // Exercice  : 
+        
+        //Créer un lien avec createElement
 
-        elements[0].style.color="pink";
-        elements[3].textContent='Contact';
+        // ajouter un href = # avec setAttribute
+        // ajout d'une classe 'active' avec className 
+        // ajout d'un icon (fontawesome) avec innerHTML
+        // appliquer à h1 avec querySelector et appendChild ou prependChild         
+        // 
 
-        console.log(elements);
+        let lien = document.createElement('a');
+        lien.setAttribute('href','#');
+        lien.className = 'active';
+        lien.innerHTML ='<i class="fa-solid fa-igloo"></i>';
+
+        document.querySelector('h1').appendChild(lien);
+        console.log(lien);
     </script>
 
 
