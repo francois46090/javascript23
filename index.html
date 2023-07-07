@@ -10,11 +10,11 @@
     <h2>Manipulation du dom</h2>
 
   <ul id="menu">
-    <li>Lien 1</li>
-    <li>Lien 2</li>
-    <li>Lien 3</li>
-    <li>Lien 4</li>
-    <li>Lien 5</li>
+    <li class="lien active">Lien 1</li>
+    <li class="lien">Lien 2</li>
+    <li class="lien">Lien 3</li>
+    <li class="lien">Lien 4</li>
+    <li class="lien">Lien 5</li>
   </ul>
 
 
@@ -54,11 +54,16 @@
 
 
         ///// Liens Menu ///
-        document.querySelector('li').style.background="gray";
-        document.querySelector('li:last-child').style.color="red";
+      
+        //let elements = document.getElementsByClassName('lien');
 
-        document.querySelector('li:nth-child(2)').style.background="blue";
+        let elements = document.querySelectorAll('li.lien');
 
+
+        elements[0].style.color="pink";
+        elements[3].textContent='Contact';
+
+        console.log(elements);
     </script>
 
 
