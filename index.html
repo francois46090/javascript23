@@ -7,38 +7,45 @@
 </head>
 <body>
     <h1>Initiation à javascript</h1>
+    <h2>Manipulation du dom</h2>
+
+    <!-- Formulaire-->
+
+    <form action="#" method="POST">
+        <input type="search" placeholder="Recherche">
+        <input type="submit">
+    </form>
+<form action="">
+    <input type="search" placeholder="Recherche">
+    <input type="submit">
+</form>
 
 
+    <!-- Liens-->
+    <a href="#" class="btn btn-info">Lien 1</a>
+    <a href="contact.html">Contact</a>
+
+
+    <!-- images -->
+
+    <img src="conseils-tpe.jpg" alt="exemple">
+    <img src="demo5-bw.jpg" alt="">
+
+
+
+
+     <script src="script.js" type="text/javascript"></script>
     <script type="text/javascript">
-        // Zone de javascript 
 
-        //alert('Bienvenue!');
-
-        // variables
-
-        var  nom = "Dupont";
-        let prenom = 'thierry';
- 
-        nom = "françois"
-        const client = {
-            nom : "dupont",
-            age:30
-        };
-
-
-        var resultat = true;
-        client.nom="François";
-
-        const tableau = [1,2,3,4,5];
-        tableau.push(6);
-
-
-
-        console.log(client.nom);
-
-
-        console.log(tableau);
-        console.log(typeof resultat);
+    var val1 = document.forms[1].action;
+    var val2 = document.links[0].className;
+    var img = document.images[0].getAttribute('alt');
+    var script1 = document.scripts[0].getAttribute('src');
+    console.log(val2);
+    console.log(img);
+    console.log(script1);
     </script>
+
+
 </body>
 </html>
